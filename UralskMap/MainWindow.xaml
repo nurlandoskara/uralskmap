@@ -1,0 +1,23 @@
+﻿<Window x:Class="UralskMap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" WindowState="Maximized"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="90*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+        <MediaElement x:Name="bgVideo" Source="Resources/bg.mp4" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <m:Map x:Name="myMap" Grid.Column="1" Grid.Row="1"
+               CredentialsProvider="7ji4BKNiQKS32NZGgqmv~4Ck2OXbG10gQczphZxwzjQ~AqZbt79uI1ElCh5DLKd7InILPdVkg0S54OaF6_xYXI6OCs4y7OHQRubEbCueJHwa" 
+               Mode="AerialWithLabels"  Center="51.227339, 51.381180" ZoomLevel="12"/>
+    </Grid>
+</Window>
