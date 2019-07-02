@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using Microsoft.Maps.MapControl.WPF;
 
 namespace UralskMap
@@ -11,8 +12,10 @@ namespace UralskMap
         public MainWindow()
         {
             InitializeComponent();
-            myMap.Mode = new RoadMode();
-            bgVideo.Play();
+            MyMap.Mode = new RoadMode();
+            BgVideo.Source = new Uri($"{AppDomain.CurrentDomain.BaseDirectory}/bg.mp4");
+            BgVideo.Play();
+            MyMap.Focus();
         }
     }
 }

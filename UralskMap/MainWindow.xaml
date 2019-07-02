@@ -15,8 +15,8 @@
             <RowDefinition Height="10*"/>
             <RowDefinition Height="90*"/>
         </Grid.RowDefinitions>
-        <MediaElement x:Name="bgVideo" Source="Resources/bg.mp4" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <m:Map x:Name="myMap" Grid.Column="1" Grid.Row="1"
+        <MediaElement x:Name="BgVideo" LoadedBehavior="Manual" Stretch="Fill" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <m:Map x:Name="MyMap" Grid.Column="1" Grid.Row="1"
                CredentialsProvider="7ji4BKNiQKS32NZGgqmv~4Ck2OXbG10gQczphZxwzjQ~AqZbt79uI1ElCh5DLKd7InILPdVkg0S54OaF6_xYXI6OCs4y7OHQRubEbCueJHwa" 
                Mode="AerialWithLabels"  Center="51.227339, 51.381180" ZoomLevel="12"/>
     </Grid>
