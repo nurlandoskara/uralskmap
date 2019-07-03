@@ -6,7 +6,7 @@ namespace UralskMap
 {
     public class Locations
     {
-        public static List<Location> GetLocations(Enums.LocationType locationType)
+        public static List<LocationPoint> GetLocations(Enums.LocationType locationType)
         {
             using (var db = new ModelContainer())
             {

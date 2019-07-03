@@ -6,6 +6,7 @@
   <Import Project="..\packages\cef.redist.x64.73.1.13\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.73.1.13\build\cef.redist.x64.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <CefSharpAnyCpuSupport>true</CefSharpAnyCpuSupport>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9B0CDB5C-AFD7-4E26-8606-B0B288760B01}</ProjectGuid>
@@ -116,6 +117,15 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="LoadData.cs" />
+    <Compile Include="Migrations\201907031745171_Initial.cs" />
+    <Compile Include="Migrations\201907031745171_Initial.Designer.cs">
+      <DependentUpon>201907031745171_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907031750594_Initial2.cs" />
+    <Compile Include="Migrations\201907031750594_Initial2.Designer.cs">
+      <DependentUpon>201907031750594_Initial2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FileItem.cs" />
     <Compile Include="Models\ImageItem.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
@@ -160,7 +170,7 @@
   <ItemGroup>
     <Compile Include="MapButtons.cs" />
     <Compile Include="ModelContainer.cs" />
-    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\LocationPoint.cs" />
     <Compile Include="Models\Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -175,6 +185,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201907031745171_Initial.resx">
+      <DependentUpon>201907031745171_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907031750594_Initial2.resx">
+      <DependentUpon>201907031750594_Initial2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

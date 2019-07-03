@@ -9,14 +9,14 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using Microsoft.Maps.MapControl.WPF;
 using UralskMap.Views;
-using Location = UralskMap.Models.Location;
+using LocationPoint = UralskMap.Models.LocationPoint;
 
 namespace UralskMap
 {
     public class MapButtons
     {
         private bool _isExpanding;
-        private List<Location> _items;
+        private List<LocationPoint> _items;
         public static int Width { get; set; }
         public static int Height { get; set; }
         public MapButtons(int width, int height)
@@ -36,7 +36,7 @@ namespace UralskMap
 
             return list;
         }
-        public Canvas Get(Location location)
+        public Canvas Get(LocationPoint location)
         {
             var canvas = new Canvas { Width = Width * 5, Height = Width * 2 };
             var brush = new ImageBrush
@@ -116,7 +116,7 @@ namespace UralskMap
             Canvas.SetTop(text, Width * 3);
             canvas.Children.Add(text);
 
-            MapLayer.SetPosition(canvas, location.Position);
+            MapLayer.SetPosition(canvas, new Location(location.Position.Latitude, location.Position.Longitude));
             return canvas;
         }
 
@@ -124,21 +124,21 @@ namespace UralskMap
         {
             var button = sender as Border;
             if (button == null) return;
-            var view = new VideoViewer($"C:\\xampp\\htdocs\\{button.Tag}\\video.mp4");
+            var view = new VideoViewer($"C:\\xampp\\htdocs\\locations\\{button.Tag}\\video.mp4");
             view.ShowDialog();
         }
         private void Pano_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             var button = sender as Border;
             if (button == null) return;
-            var view = new WebViewer($"http:\\localhost\\{button.Tag}\\pano.html");
+            var view = new WebViewer($"http:\\localhost\\locations\\{button.Tag}\\pano.html");
             view.ShowDialog();
         }
         private void Model_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             var button = sender as Border;
             if (button == null) return;
-            var view = new WebViewer($"http:\\localhost\\{button.Tag}\\3d model\\start.html");
+            var view = new WebViewer($"http:\\localhost\\locations\\{button.Tag}\\3d model\\start.html");
             view.ShowDialog();
         }
 
