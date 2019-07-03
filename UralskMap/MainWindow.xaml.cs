@@ -17,5 +17,15 @@ namespace UralskMap
             BgVideo.Play();
             MyMap.Focus();
         }
+
+        private void ShowLocations(Enums.LocationType locationType)
+        {
+            var mapButtons = new MapButtons(5,5);
+            var canvasList = mapButtons.GetList(locationType);
+            foreach (var canvas in canvasList)
+            {
+                MyMap.Children.Add(canvas);
+            }
+        }
     }
 }

@@ -20,6 +20,7 @@
                CredentialsProvider="7ji4BKNiQKS32NZGgqmv~4Ck2OXbG10gQczphZxwzjQ~AqZbt79uI1ElCh5DLKd7InILPdVkg0S54OaF6_xYXI6OCs4y7OHQRubEbCueJHwa" 
                Mode="AerialWithLabels"  Center="51.227339, 51.381180" ZoomLevel="12">
             <m:Pushpin Location="51.227339, 51.381180"/>
+            <Button Content="Button" m:MapLayer.Position="51.227300, 51.381180"></Button>
         </m:Map>
     </Grid>
 </Window>
