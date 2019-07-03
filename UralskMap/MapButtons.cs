@@ -146,7 +146,7 @@ namespace UralskMap
         {
             var button = sender as Border;
             if (button == null) return;
-            var view = new PhotoViewer($"C:\\xampp\\htdocs\\{button.Tag}\\photo");
+            var view = new PhotoViewer($"C:\\xampp\\htdocs\\locations\\{button.Tag}\\photo");
             view.ShowDialog();
         }
 
