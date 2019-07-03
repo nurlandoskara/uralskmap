@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using Microsoft.Maps.MapControl.WPF;
+using UralskMap.Views;
 using Location = UralskMap.Models.Location;
 
 namespace UralskMap

@@ -1,0 +1,65 @@
+﻿<mah:MetroWindow x:Class="UralskMap.Views.PhotoViewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow"
+        Height="600" Width="1000">
+    <Grid x:Name="Grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <mah:FlipView x:Name="FlipView" ItemsSource="{Binding Items}" Grid.Column="1" Grid.Row="0" 
+                      IsBannerEnabled="False" SelectedItem="{Binding SelectedItem}" BannerText="{Binding SelectedItem.Description}"
+                      SelectedIndex="{Binding SelectedIndex}" >
+            <mah:FlipView.Background>
+                <SolidColorBrush Color="White"/>
+            </mah:FlipView.Background>
+            <mah:FlipView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80*"/>
+                            <RowDefinition Height="20*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="{Binding Url}" Width="{Binding ActualWidth, ElementName=FlipView}" Grid.Row="0" Grid.RowSpan="2" Stretch="UniformToFill"/>
+                        <Label Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                            <Label.Background>
+                                <SolidColorBrush Color="Black" Opacity="0.5"/>
+                            </Label.Background>
+                            <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Foreground="White"/>
+                        </Label>
+                    </Grid>
+                </DataTemplate>
+            </mah:FlipView.ItemTemplate>
+        </mah:FlipView>
+        <ListBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" x:Name="GalleryList" HorizontalContentAlignment="Center" SelectionMode="Single" SelectedItem="{Binding SelectedItem}"
+                 ItemsSource="{Binding Items}" Background="{x:Null}" BorderBrush="{x:Null}" mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+            <ListBox.Resources>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+            </ListBox.Resources>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel x:Name="WrapPanel" HorizontalAlignment="Center" Orientation="Horizontal" CanHorizontallyScroll="True"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Padding="10" Background="White" >
+                        <Image Source="{Binding Source}" Stretch="Uniform" Height="150"/>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</mah:MetroWindow>
