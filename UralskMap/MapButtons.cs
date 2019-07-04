@@ -46,7 +46,7 @@ namespace UralskMap
             {
                 ImageSource = new BitmapImage(
                     new Uri(
-                        $"pack://application:,,,/AktobeInteractive;component/Resources/LocationTypeIcons/{EnumHelper.Description(location.LocationType)}.jpg")),
+                        $"pack://application:,,,/UralskMap;component/Resources/LocationTypeIcons/{location.LocationType.ToString()}.jpg")),
                 Stretch = Stretch.Uniform
             };
             var point = new Border
@@ -74,26 +74,26 @@ namespace UralskMap
                 {
                     case 0:
                         bg.ImageSource = new BitmapImage(
-                            new Uri("pack://application:,,,/AktobeInteractive;component/Resources/ButtonIcons/info.png"));
+                            new Uri("pack://application:,,,/UralskMap;component/Resources/ButtonIcons/info.png"));
                         break;
                     case 1:
                         button.MouseDown += Video_OnMouseDown;
                         bg.ImageSource = new BitmapImage(
-                            new Uri("pack://application:,,,/AktobeInteractive;component/Resources/ButtonIcons/video.png"));
+                            new Uri("pack://application:,,,/UralskMap;component/Resources/ButtonIcons/video.png"));
                         break;
                     case 2:
                         button.MouseDown += Pano_OnMouseDown;
                         bg.ImageSource = new BitmapImage(
-                            new Uri("pack://application:,,,/AktobeInteractive;component/Resources/ButtonIcons/360.png"));
+                            new Uri("pack://application:,,,/UralskMap;component/Resources/ButtonIcons/360.png"));
                         break;
                     case 3:
                         button.MouseDown += Model_OnMouseDown; bg.ImageSource = new BitmapImage(
-                    new Uri("pack://application:,,,/AktobeInteractive;component/Resources/ButtonIcons/3d.png"));
+                    new Uri("pack://application:,,,/UralskMap;component/Resources/ButtonIcons/3d.png"));
                         break;
                     case 4:
                         button.MouseDown += Photo_OnMouseDown;
                         bg.ImageSource = new BitmapImage(
-                            new Uri("pack://application:,,,/AktobeInteractive;component/Resources/ButtonIcons/photo.png"));
+                            new Uri("pack://application:,,,/UralskMap;component/Resources/ButtonIcons/photo.png"));
                         break;
                 }
 
@@ -109,7 +109,7 @@ namespace UralskMap
             {
                 Text = location.Title,
                 Visibility = Visibility.Hidden,
-                Background = new SolidColorBrush(Colors.Black),
+                Background = new SolidColorBrush(Colors.CornflowerBlue),
                 Padding = new Thickness(5),
                 Foreground = new SolidColorBrush(Colors.White),
                 TextWrapping = TextWrapping.Wrap,

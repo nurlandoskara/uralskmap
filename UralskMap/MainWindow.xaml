@@ -22,7 +22,7 @@
                Mode="AerialWithLabels"  Center="51.227339, 51.381180" ZoomLevel="12" BorderBrush="DarkBlue" BorderThickness="1">
         </m:Map>
         <StackPanel x:Name="MenuTitles" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Background="CornflowerBlue">
-            <Button Background="Transparent" Foreground="White"/>
+            <Button Content="Сакральные места" Background="Transparent" Foreground="White"/>
             <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
             <Button Content="Автозапчасти" Background="Transparent" Foreground="White"/>
             <Button Content="Авиабилеты" Background="Transparent" Foreground="White"/>

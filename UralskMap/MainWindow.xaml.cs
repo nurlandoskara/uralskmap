@@ -21,6 +21,7 @@ namespace UralskMap
             BgVideo.Play();
             MyMap.Focus();
             ButtonSizes();
+            ShowLocations(Enums.LocationType.Base);
         }
 
         private void ButtonSizes()
@@ -39,12 +40,16 @@ namespace UralskMap
                 i++;
             }
             MenuPanel.Width = height;
+            i = 0;
             foreach (Button button in MenuTitles.Children)
-            {
+            { 
                 button.FontSize = 9;
                 button.VerticalContentAlignment = VerticalAlignment.Center;
                 button.HorizontalContentAlignment = HorizontalAlignment.Left;
                 button.Height = height;
+                button.Click += MenuClick;
+                button.Tag = i;
+                i++;
             }
         }
 
@@ -54,13 +59,17 @@ namespace UralskMap
             {
                 var locationType = (Enums.LocationType) button.Tag;
                 ShowLocations(locationType);
-                Title.Content = EnumHelper.Description(locationType);
             }
         }
 
         private void ShowLocations(Enums.LocationType locationType)
         {
-            var mapButtons = new MapButtons(5,5, MyMap);
+            Title.Content = EnumHelper.Description(locationType);
+            MyMap.ZoomLevel = locationType == Enums.LocationType.Base ? 7 : 12;
+            MyMap.Center = locationType == Enums.LocationType.Base
+                ? new Location(49.930999, 50.903586)
+                : new Location(51.227339, 51.381180);
+            var mapButtons = new MapButtons(25,25, MyMap);
             var canvasList = mapButtons.GetList(locationType);
             foreach (var canvas in canvasList)
             {

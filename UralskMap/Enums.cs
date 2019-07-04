@@ -6,6 +6,7 @@ namespace UralskMap
     {
         public enum LocationType
         {
+            [Description("Сакральные места")]
             Base = 0,
             Atm = 1,
             Autopart = 2,

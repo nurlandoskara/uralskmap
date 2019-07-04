@@ -254,6 +254,9 @@
   <ItemGroup>
     <Resource Include="Resources\LocationTypeIcons\menuIcon.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\LocationTypeIcons\base.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
