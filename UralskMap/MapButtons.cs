@@ -17,12 +17,15 @@ namespace UralskMap
     {
         private bool _isExpanding;
         private List<LocationPoint> _items;
+        private Map _map;
         public static int Width { get; set; }
         public static int Height { get; set; }
-        public MapButtons(int width, int height)
+        public MapButtons(int width, int height, Map map)
         {
             Width = width;
             Height = height;
+            _map = map;
+            _map.MouseDown += Map_OnMouseDown;
         }
 
         public List<Canvas> GetList(Enums.LocationType locationType)
@@ -187,6 +190,49 @@ namespace UralskMap
 
                 a += Math.PI / 4;
             }
+        }
+
+
+        private void Map_OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (_isExpanding)
+            {
+                _isExpanding = false;
+                return;
+            }
+            foreach (Canvas canvas in _map.Children)
+            {
+                var text = canvas.Children.OfType<TextBlock>().FirstOrDefault();
+                if (text != null) text.Visibility = Visibility.Hidden;
+                double a = 0;
+                foreach (Border button in canvas.Children)
+                {
+                    if (a > Math.PI) break;
+                    var radius = Width + Width / 2;
+                    var leftAnimation = new DoubleAnimation
+                    {
+                        From = radius - radius * Math.Cos(a),
+                        To = radius,
+                        Duration = TimeSpan.FromSeconds(1)
+                    };
+
+                    var topAnimation = new DoubleAnimation
+                    {
+                        From = radius - radius * Math.Sin(a),
+                        To = radius,
+                        Duration = TimeSpan.FromSeconds(1)
+                    };
+
+                    button.BeginAnimation(Canvas.LeftProperty, leftAnimation);
+                    button.BeginAnimation(Canvas.TopProperty, topAnimation);
+
+                    button.Visibility = Visibility.Hidden;
+                    a += Math.PI / 4;
+                }
+                Panel.SetZIndex(canvas, 0);
+            }
+
+            _isExpanding = false;
         }
     }
 }

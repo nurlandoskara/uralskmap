@@ -1,11 +1,10 @@
 ﻿<Window x:Class="UralskMap.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" WindowState="Maximized" WindowStyle="None"
         xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
-        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d" WindowState="Maximized" WindowStyle="None"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -19,9 +18,35 @@
         <MediaElement x:Name="BgVideo" LoadedBehavior="Manual" Stretch="Fill" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <m:Map x:Name="MyMap" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" AnimationLevel="Full" Margin="10"
                CredentialsProvider="7ji4BKNiQKS32NZGgqmv~4Ck2OXbG10gQczphZxwzjQ~AqZbt79uI1ElCh5DLKd7InILPdVkg0S54OaF6_xYXI6OCs4y7OHQRubEbCueJHwa" 
-               Mode="AerialWithLabels"  Center="51.227339, 51.381180" ZoomLevel="12">
+               Mode="AerialWithLabels"  Center="51.227339, 51.381180" ZoomLevel="12" BorderBrush="DarkBlue" BorderThickness="1">
         </m:Map>
-        <StackPanel x:Name="MenuPanel" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Left" Background="CornflowerBlue">
+        <StackPanel x:Name="MenuTitles" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Background="CornflowerBlue">
+            <Button Background="Transparent" Foreground="White"/>
+            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
+            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
+            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
+            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
+            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
+            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
+            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
+            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
+            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
+            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
+            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
+            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
+            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
+        </StackPanel>
+        <StackPanel x:Name="MenuPanel" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Left">
+            <Button Click="ButtonBase_OnClick">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/menuIcon.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button>
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/atm.jpg"/>
+                </Button.Background>
+            </Button>
             <Button>
                 <Button.Background>
                     <ImageBrush ImageSource="Resources/LocationTypeIcons/atm.jpg"/>
