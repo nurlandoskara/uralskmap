@@ -29,18 +29,32 @@ namespace UralskMap
             MyMap.Margin = new Thickness(height + 10, 10, 10, 10);
             MenuTitles.Width = _width;
             MenuTitles.Margin = new Thickness(-_width, 0, _width, 0);
+            int i = 0;
             foreach (Button button in MenuPanel.Children)
             {
                 button.Width = height;
                 button.Height = height;
+                button.Click += MenuClick;
+                button.Tag = i;
+                i++;
             }
             MenuPanel.Width = height;
             foreach (Button button in MenuTitles.Children)
             {
-                button.FontSize = 8;
+                button.FontSize = 9;
                 button.VerticalContentAlignment = VerticalAlignment.Center;
                 button.HorizontalContentAlignment = HorizontalAlignment.Left;
                 button.Height = height;
+            }
+        }
+
+        private void MenuClick(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                var locationType = (Enums.LocationType) button.Tag;
+                ShowLocations(locationType);
+                Title.Content = EnumHelper.Description(locationType);
             }
         }
 
