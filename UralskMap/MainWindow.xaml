@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" WindowState="Maximized" WindowStyle="None"
         xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -16,11 +17,191 @@
             <RowDefinition Height="90*"/>
         </Grid.RowDefinitions>
         <MediaElement x:Name="BgVideo" LoadedBehavior="Manual" Stretch="Fill" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <m:Map x:Name="MyMap" Grid.Column="1" Grid.Row="1" AnimationLevel="Full"
+        <m:Map x:Name="MyMap" Grid.Column="1" Grid.Row="1" AnimationLevel="Full" Margin="10"
                CredentialsProvider="7ji4BKNiQKS32NZGgqmv~4Ck2OXbG10gQczphZxwzjQ~AqZbt79uI1ElCh5DLKd7InILPdVkg0S54OaF6_xYXI6OCs4y7OHQRubEbCueJHwa" 
                Mode="AerialWithLabels"  Center="51.227339, 51.381180" ZoomLevel="12">
-            <m:Pushpin Location="51.227339, 51.381180"/>
-            <Button Content="Button" m:MapLayer.Position="51.227300, 51.381180"></Button>
         </m:Map>
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Left" Background="CornflowerBlue">
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/atm.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/autopart.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/avia.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/bank.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/beach.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/bicyclelane.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/cafe.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/canteen.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/carshowroom.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/carwash.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/cinema.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/club.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/culturalcenter.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/dentistry.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/fountain.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/gasstation.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/gym.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/hairsalon.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/hospital.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/hotel.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/monument.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/museum.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/park.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/pharmacy.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/railwaykassa.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/restaurant.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/restzone.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/school.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/servicestation.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/shop.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/shoppingcenter.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/stop.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/taxi.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/theater.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/trucking.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/LocationTypeIcons/university.jpg"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

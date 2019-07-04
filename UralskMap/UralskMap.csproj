@@ -204,7 +204,43 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\LocationTypeIcons\atm.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\autopart.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\bank.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\beach.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\bicyclelane.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\cafe.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\canteen.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\carshowroom.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\carwash.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\cinema.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\club.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\culturalcenter.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\dentistry.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\fountain.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\gasstation.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\gym.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\hairsalon.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\hospital.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\hotel.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\monument.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\museum.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\park.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\pharmacy.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\railwaykassa.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\restaurant.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\restzone.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\school.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\servicestation.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\shop.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\shoppingcenter.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\stop.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\taxi.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\theater.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\trucking.jpg" />
+    <Resource Include="Resources\LocationTypeIcons\university.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\LocationTypeIcons\avia.jpg" />
   </ItemGroup>
