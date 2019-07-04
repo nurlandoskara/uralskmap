@@ -16,35 +16,53 @@
             <RowDefinition Height="90*"/>
         </Grid.RowDefinitions>
         <MediaElement x:Name="BgVideo" LoadedBehavior="Manual" Stretch="Fill" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <m:Map x:Name="MyMap" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" AnimationLevel="Full" Margin="10"
+        <m:Map x:Name="MyMap" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" AnimationLevel="Full" 
                CredentialsProvider="7ji4BKNiQKS32NZGgqmv~4Ck2OXbG10gQczphZxwzjQ~AqZbt79uI1ElCh5DLKd7InILPdVkg0S54OaF6_xYXI6OCs4y7OHQRubEbCueJHwa" 
                Mode="AerialWithLabels"  Center="51.227339, 51.381180" ZoomLevel="12" BorderBrush="DarkBlue" BorderThickness="1">
         </m:Map>
         <StackPanel x:Name="MenuTitles" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Background="CornflowerBlue">
             <Button Background="Transparent" Foreground="White"/>
             <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
-            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
-            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
-            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
-            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
-            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
-            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
-            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
-            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
-            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
-            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
-            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
-            <Button Content="Банкоматы" Background="Transparent" Foreground="White"/>
+            <Button Content="Автозапчасти" Background="Transparent" Foreground="White"/>
+            <Button Content="Авиабилеты" Background="Transparent" Foreground="White"/>
+            <Button Content="Банки" Background="Transparent" Foreground="White"/>
+            <Button Content="Пляжы" Background="Transparent" Foreground="White"/>
+            <Button Content="Велодорожки" Background="Transparent" Foreground="White"/>
+            <Button Content="Кафе" Background="Transparent" Foreground="White"/>
+            <Button Content="Общепить" Background="Transparent" Foreground="White"/>
+            <Button Content="Автосалоны" Background="Transparent" Foreground="White"/>
+            <Button Content="Автомойки" Background="Transparent" Foreground="White"/>
+            <Button Content="Кинотеатры" Background="Transparent" Foreground="White"/>
+            <Button Content="Клубы" Background="Transparent" Foreground="White"/>
+            <Button Content="Культурные центры" Background="Transparent" Foreground="White"/>
+            <Button Content="Стоматология" Background="Transparent" Foreground="White"/>
+            <Button Content="Фонтаны" Background="Transparent" Foreground="White"/>
+            <Button Content="Бензоколонки" Background="Transparent" Foreground="White"/>
+            <Button Content="Тренажерные залы" Background="Transparent" Foreground="White"/>
+            <Button Content="Парикмахерские" Background="Transparent" Foreground="White"/>
+            <Button Content="Клиники" Background="Transparent" Foreground="White"/>
+            <Button Content="Отели" Background="Transparent" Foreground="White"/>
+            <Button Content="Памятники" Background="Transparent" Foreground="White"/>
+            <Button Content="Музеи" Background="Transparent" Foreground="White"/>
+            <Button Content="Парки" Background="Transparent" Foreground="White"/>
+            <Button Content="Аптеки" Background="Transparent" Foreground="White"/>
+            <Button Content="ЖД кассы" Background="Transparent" Foreground="White"/>
+            <Button Content="Рестораны" Background="Transparent" Foreground="White"/>
+            <Button Content="Зоны отдыха" Background="Transparent" Foreground="White"/>
+            <Button Content="Школы" Background="Transparent" Foreground="White"/>
+            <Button Content="СТО" Background="Transparent" Foreground="White"/>
+            <Button Content="Магазины" Background="Transparent" Foreground="White"/>
+            <Button Content="Торговые домы" Background="Transparent" Foreground="White"/>
+            <Button Content="Остановки" Background="Transparent" Foreground="White"/>
+            <Button Content="Такси" Background="Transparent" Foreground="White"/>
+            <Button Content="Театры" Background="Transparent" Foreground="White"/>
+            <Button Content="Грузоперевозки" Background="Transparent" Foreground="White"/>
+            <Button Content="Университеты" Background="Transparent" Foreground="White"/>
         </StackPanel>
         <StackPanel x:Name="MenuPanel" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Left">
             <Button Click="ButtonBase_OnClick">
                 <Button.Background>
                     <ImageBrush ImageSource="Resources/LocationTypeIcons/menuIcon.jpg"/>
-                </Button.Background>
-            </Button>
-            <Button>
-                <Button.Background>
-                    <ImageBrush ImageSource="Resources/LocationTypeIcons/atm.jpg"/>
                 </Button.Background>
             </Button>
             <Button>

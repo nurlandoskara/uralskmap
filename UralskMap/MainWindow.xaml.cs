@@ -26,6 +26,7 @@ namespace UralskMap
         private void ButtonSizes()
         {
             var height = SystemParameters.PrimaryScreenHeight / MenuPanel.Children.Count;
+            MyMap.Margin = new Thickness(height + 10, 10, 10, 10);
             MenuTitles.Width = _width;
             MenuTitles.Margin = new Thickness(-_width, 0, _width, 0);
             foreach (Button button in MenuPanel.Children)
