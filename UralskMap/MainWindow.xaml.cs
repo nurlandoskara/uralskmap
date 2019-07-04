@@ -1,5 +1,7 @@
 ﻿using Microsoft.Maps.MapControl.WPF;
 using System;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace UralskMap
 {
@@ -15,6 +17,17 @@ namespace UralskMap
             BgVideo.Source = new Uri($"{AppDomain.CurrentDomain.BaseDirectory}/bg.mp4");
             BgVideo.Play();
             MyMap.Focus();
+            ButtonSizes();
+        }
+
+        private void ButtonSizes()
+        {
+            var height = SystemParameters.PrimaryScreenHeight / MenuPanel.Children.Count;
+            foreach (Button button in MenuPanel.Children)
+            {
+                button.Width = height;
+                button.Height = height;
+            }
         }
 
         private void ShowLocations(Enums.LocationType locationType)
